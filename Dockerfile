@@ -15,7 +15,7 @@ RUN apt-get install -y supervisor
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 
 # Create user and group
-RUN groupadd -g 1000 www && useradd -u 1000 -g www www
+RUN groupadd -g 1001 www && useradd -u 1001 -g www www
 
 RUN mkdir /www && touch /www/docker-volume-not-mounted && chown www:www /www
 WORKDIR /www
